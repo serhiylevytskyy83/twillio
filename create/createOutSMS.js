@@ -2,8 +2,8 @@ require('dotenv').config();
 
 
 function createOutSMS(req, res) {
-    const accountSid = process.env.TWILIO_ACCOUNT_SID;
-    const authToken = process.env.TWILIO_AUTH_TOKEN;
+    const accountSid = 'AC26d060868e8b8ee685b1ed0ee7df9bac';
+    const authToken ='b1b81544c0294d8f88fe3b47db494c41';
 
     const client = require('twilio')(accountSid, authToken);
     client.messages
