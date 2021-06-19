@@ -5,10 +5,11 @@ function createInSMS(req, res) {
 
     const twiml = new MessagingResponse();
 
-    twiml.redirect('https://ukr.net');
+    twiml.message('OHO!!!!');
 
     res.writeHead(200, { 'Content-Type': 'text/xml' });
     res.end(twiml.toString());
+    console.log(twiml.toString());
 }
 
 module.exports = createInSMS;
