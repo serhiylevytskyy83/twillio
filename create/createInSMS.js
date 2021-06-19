@@ -1,6 +1,6 @@
 const twilio = require('twilio')
 
-async function createInSMS(req, res) {
+function createInSMS(req, res) {
 
 
     const twiml = new MessagingResponse();
