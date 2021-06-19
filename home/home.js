@@ -1,5 +1,5 @@
 function home() {
-    console.log("Server is working")
+    res.json('API Server is working');
 }
 
 module.exports = home;
