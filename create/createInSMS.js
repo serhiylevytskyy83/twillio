@@ -5,13 +5,12 @@ function createInSMS(req, res) {
     const from = req.body.from;
     const text = req.body.body;
     res.send(`
-<Response>
-<Message>
-Hello$ {from} you said ${text}
-</Message>>
-</Response>>
-`
-    )
+    <Response>
+        <Message>
+            Hello ${from} you said ${text}
+        </Message>
+    </Response>
+    `)
     // const twiml = new MessagingResponse();
     //
     // twiml.message('MESSAGE SUCCESSFULLY SENT');
