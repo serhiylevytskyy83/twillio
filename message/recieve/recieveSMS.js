@@ -1,7 +1,7 @@
 const twilio = require('twilio')
 const MessagingResponse = require("twilio/lib/twiml/MessagingResponse");
 
-function createInSMS(req, res) {
+function recieveSMS(req, res) {
 
     const twiml = new MessagingResponse();
     let from = req.body.From;
@@ -13,4 +13,4 @@ function createInSMS(req, res) {
     console.log(twiml.toString());
 }
 
-module.exports = createInSMS;
+module.exports = recieveSMS;
