@@ -1,8 +1,8 @@
-const SMS = require('./Model')
+const SMSka = require('./Model')
 
 function receiveQuery(from, to, body) {
 
-    const sms = new SMS({
+    const sms = new SMSka({
         from: from,
         to: to,
         body: body,
