@@ -1,20 +1,17 @@
-function save(smsOut, direction){
-    const sms ={
-        ...smsOut,
-        direction
-    }
-    sms
+const SMS = require('./Model')
+
+function sendQuery(from, to, body, direction) {
+
+    const sms = new SMS({
+        from: from,
+        to: to,
+        body: body,
+        direction: direction,
+    });
+    return sms
         .save()
-        .then((res) => {
-            res.status(200).json('sms saved');
-        })
-        .catch((err,res) => {
-            console.log(err);
-            res.status(400).json('sms not saved');
-        })
-        .finally(() => {
-            console.log('END');
-        });
+
 
 }
-module.exports = save;
+
+module.exports = sendQuery;

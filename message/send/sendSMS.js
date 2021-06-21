@@ -1,5 +1,7 @@
-const outSMS = require('./Model')
-const save = require("./sendQuery");
+
+const sendQuery = require("./sendQuery");
+const mogoose = require('mongoose')
+// const save = require("./sendQuery");
 require('dotenv').config();
 
 
@@ -9,24 +11,21 @@ function sendSMS(req, res) {
 
     const client = require('twilio')(accountSid, authToken);
 
-    const smsOut = new outSMS({
-        from: req.body.from,
-        to: req.body.to,
-        bodyText: req.body.bodyText,
-    });
-
+    const from = req.body.from;
+    const to = req.body.to;
+    const body = req.body.body
 
     client.messages
         .create({
-            to: req.body.to,
             from: req.body.from,
+            to: req.body.to,
             body: req.body.body,
         })
         .then((message) => {
-            save(smsOut, message.direction)
-
-                  res.status(200).json(message.direction);
-    })
+            sendQuery(from, to, body, message.direction)
+            res.status(200).json(message.direction);
+        })
         .catch(error => console.error(error));
 }
+
 module.exports = sendSMS;
