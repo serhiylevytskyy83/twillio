@@ -6,10 +6,10 @@ function recieveSMS(req, res) {
 
     const twiml = new MessagingResponse();
     let from = req.body.From;
-    // let to = req.body.To;
-    // let body = req.body.Body;
+    let to = req.body.To;
+    let body = req.body.Body;
 
-    // receiveQuery(from,to,body);
+    receiveQuery(from,to,body);
 
     twiml.message(`OHO!!!! ${from}`);
 
