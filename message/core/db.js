@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-//mongodb+srv://admin:d8FOnQltm32GM6zR@cluster0.9inzv.mongodb.net/Twillio?retryWrites=true&w=majority
+
 // mongodb://localhost/twilio
 function dbConnect() {
     mongoose.connect(
-        '//mongodb+srv://admin:d8FOnQltm32GM6zR@cluster0.9inzv.mongodb.net/Twillio?retryWrites=true&w=majority',
+        'mongodb+srv://admin:d8FOnQltm32GM6zR@cluster0.9inzv.mongodb.net/Twillio?retryWrites=true&w=majority',
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
