@@ -3,7 +3,7 @@ const receiveSMS = require('./recieveSMS')
 
 const router = Router();
 
-router.post('/receive',receiveSMS)
+router.post('/in',receiveSMS)
 
 
 module.exports = router;
