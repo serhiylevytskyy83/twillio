@@ -11,6 +11,6 @@ const smsSendSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('SMS', smsSendSchema);
+module.exports = mongoose.model('OUT', smsSendSchema);
 
 

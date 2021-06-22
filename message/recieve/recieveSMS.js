@@ -5,9 +5,11 @@ const MessagingResponse = require("twilio/lib/twiml/MessagingResponse");
 function recieveSMS(req, res) {
 
     const twiml = new MessagingResponse();
+
     let from = req.body.From;
     let to = req.body.To;
     let body = req.body.Body;
+
 
     receiveQuery(from,to,body);
 

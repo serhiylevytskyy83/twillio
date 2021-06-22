@@ -11,6 +11,6 @@ const smsReceiveSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('SMSka', smsReceiveSchema);
+module.exports = mongoose.model('IN', smsReceiveSchema);
 
 

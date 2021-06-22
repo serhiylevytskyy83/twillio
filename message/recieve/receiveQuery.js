@@ -1,14 +1,14 @@
-const SMSka = require('./Model')
+const SMSin = require('./Model')
 
 function receiveQuery(from, to, body) {
 
-    const sms = new SMSka({
+    const SmsIn = new SMSin({
         from: from,
         to: to,
         body: body,
-        // direction: direction,
+        direction: 'in',
     });
-    return sms
+    return SmsIn
         .save()
 
 

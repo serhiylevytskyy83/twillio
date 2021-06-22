@@ -1,14 +1,14 @@
-const SMS = require('./Model')
+const SMSout = require('./Model')
 
-function sendQuery(from, to, body, direction) {
+function sendQuery(from, to, body) {
 
-    const sms = new SMS({
+    const SmsOut = new SMSout({
         from: from,
         to: to,
         body: body,
-        direction: direction,
+        direction: 'out',
     });
-    return sms
+    return SmsOut
         .save()
 
 
